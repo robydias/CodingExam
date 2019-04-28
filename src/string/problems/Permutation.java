@@ -9,5 +9,17 @@ public class Permutation {
          * Write Java program to compute all Permutation of a String
          *
          */
+        permutation("", "ABC");
+    }
+    private static void permutation(String prefix, String str) {
+        int x = str.length();
+        if (x == 0){
+            System.out.println(prefix);
+        }
+        else {
+            for (int i = 0; i < x; i++) {
+                permutation(prefix + str.charAt(i), str.substring(0, i) + str.substring(i + 1, x));
+            }
+        }
     }
 }

@@ -23,6 +23,11 @@ public class UnitTestSorting {
 
         //Now implement Unit test for rest of the soring algorithm...................below
 
-
+        sort.insertionSort(unSortedArray);
+        try{
+            Assert.assertEquals(sortedArray, unSortedArray, "Insertion sort array is not sorted!");
+        }catch (Exception ex){
+            ex.getMessage();
+        }
     }
 }
